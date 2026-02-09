@@ -9,9 +9,15 @@ public class BasePage {
     protected WebDriver driver;
     protected ElementActions elementActions;
 
+    public BasePage() {
+
+    }
+
     public BasePage(WebDriver driver) {
         this.driver = driver;
         this.elementActions = new ElementActions(driver);
         PageFactory.initElements(driver, this);
     }
+
+
 }
